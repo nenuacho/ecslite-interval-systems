@@ -1,7 +1,7 @@
 {
   "name": "com.nenuacho.ecslite.interval-systems",
   "author": "Nenuacho",
-  "displayName": "EcsLite.IntervalSystems",
+  "displayName": "LeoECS Lite IntervalSystems",
   "unity": "2020.3",
   "version": "1.0.0",
   "dependencies": {

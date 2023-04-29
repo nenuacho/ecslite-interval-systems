@@ -46,13 +46,14 @@ WithInterval(this IEcsSystems systems, float interval, bool spreadByTime = true)
 ```
 :
 ```c#
-            _updSystems = new EcsSystems(world);
-            _updSystems
+            var inervalSystems = new EcsSystems(world)
                 .Add(new SampleSystem1())
                 .Add(new SampleSystem2())
                 .WithInterval(5f)
-                .Inject()
-                .Init();
+                .Inject();
+                
+            _intervalSystems = intervalSystems
+            _intervalSystems.Init();
 ```
 При этом все системы в этом контейнере будут иметь один заданный интервал
 

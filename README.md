@@ -46,7 +46,7 @@ WithInterval(this IEcsSystems systems, float interval, bool spreadByTime = true)
 ```
 :
 ```c#
-            var inervalSystems = new EcsSystems(world)
+            var intervalSystems = new EcsSystems(world)
                 .Add(new SampleSystem1())
                 .Add(new SampleSystem2())
                 .WithInterval(5f)

@@ -12,6 +12,7 @@ namespace Nenuacho.EcsLite.IntervalSystems
         private EcsSystemWithInterval[] _allSystems;
         private readonly IEcsSystems _systems;
         private Random _random;
+        private bool _inited;
 
         public EcsRunSystemsWithInterval(EcsWorld world)
         {
@@ -19,7 +20,7 @@ namespace Nenuacho.EcsLite.IntervalSystems
             _systems = new EcsSystems(world);
             _random = new Random();
         }
-        
+
         internal EcsRunSystemsWithInterval(IEcsSystems systems)
         {
             _allSystemsBeforeInitList = new List<EcsSystemWithInterval>();
@@ -59,6 +60,14 @@ namespace Nenuacho.EcsLite.IntervalSystems
 
         public void Run(float deltaTime)
         {
+// #if DEBUG && !LEOECSLITE_NO_SANITIZE_CHECKS
+//             if (!_inited)
+//             {
+//                 throw new Exception("Cant run without initialization.");
+//             }
+// #endif
+
+
             for (int i = 0; i < _allSystems.Length; i++)
             {
                 ref var sys = ref _allSystems[i];
@@ -66,6 +75,14 @@ namespace Nenuacho.EcsLite.IntervalSystems
                 if (sys.Cooldown <= 0)
                 {
                     sys.System.Run(_systems);
+// #if DEBUG && !LEOECSLITE_NO_SANITIZE_CHECKS
+//                     var worldName = EcsSystems.CheckForLeakedEntities(this);
+//                     if (worldName != null)
+//                     {
+//                         throw new Exception($"Empty entity detected in world \"{worldName}\" after {sys.GetType().Name}.Run().");
+//                     }
+// #endif
+
                     sys.Cooldown = sys.Interval;
                 }
             }
@@ -92,6 +109,7 @@ namespace Nenuacho.EcsLite.IntervalSystems
             _allSystemsBeforeInitList = null;
             _random = null;
             _systems.Init();
+            _inited = true;
         }
 
         public void Run()

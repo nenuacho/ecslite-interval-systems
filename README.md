@@ -52,7 +52,7 @@ WithInterval(this IEcsSystems systems, float interval, bool spreadByTime = true)
                 .WithInterval(5f)
                 .Inject();
                 
-            _systemsWithInterval.Init();
+            intervalSystems.Init();
             _systemsWithInterval = intervalSystems;
 
 ```

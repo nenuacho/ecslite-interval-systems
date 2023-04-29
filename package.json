@@ -1,7 +1,7 @@
 {
   "name": "com.nenuacho.ecslite.interval-systems",
   "author": "Nenuacho",
-  "displayName": "Nenuacho.EcsLite.IntervalSystems",
+  "displayName": "EcsLite.IntervalSystems",
   "unity": "2020.3",
   "version": "1.0.0",
   "dependencies": {

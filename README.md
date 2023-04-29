@@ -72,5 +72,5 @@ WithInterval(this IEcsSystems systems, float interval, bool spreadByTime = true)
 
 # Важно
 
-В расширении пока не поддерживается IPostRunSystem
+В расширении пока не поддерживается IEcsPostRunSystem
 

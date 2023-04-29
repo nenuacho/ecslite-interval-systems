@@ -1,0 +1,13 @@
+{
+  "name": "com.nenuacho.ecslite.interval-systems",
+  "author": "Nenuacho",
+  "displayName": "Nenuacho.EcsLite.IntervalSystems",
+  "unity": "2020.3",
+  "version": "1.0.0",
+  "dependencies": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nenuacho/ecslite-interval-systems.git"
+  }
+}

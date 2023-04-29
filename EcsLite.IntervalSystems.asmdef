@@ -1,0 +1,17 @@
+{
+    "name": "EcsLite.IntervalSystems",
+    "rootNamespace": "",
+    "references": [
+        "Leopotam.EcsLite",
+        "Leopotam.EcsLite.Di"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

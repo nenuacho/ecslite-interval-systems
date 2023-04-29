@@ -50,10 +50,10 @@ WithInterval(this IEcsSystems systems, float interval, bool spreadByTime = true)
                 .Add(new SampleSystem1())
                 .Add(new SampleSystem2())
                 .WithInterval(5f)
-                .Inject();
+                .Inject()
+                .Init();
                 
             _systemsWithInterval = intervalSystems;
-            _systemsWithInterval.Init();
 ```
 При этом все системы в этом контейнере будут иметь один заданный интервал
 

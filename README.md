@@ -52,8 +52,8 @@ WithInterval(this IEcsSystems systems, float interval, bool spreadByTime = true)
                 .WithInterval(5f)
                 .Inject();
                 
-            _intervalSystems = intervalSystems;
-            _intervalSystems.Init();
+            _systemsWithInterval = intervalSystems;
+            _systemsWithInterval.Init();
 ```
 При этом все системы в этом контейнере будут иметь один заданный интервал
 
